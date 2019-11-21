@@ -56,14 +56,14 @@ def get_lyrics(artiste,song):
         print ('Thanks for using the program')
 
 
-    songs_name = input("input the name of the song : ") #eg Diced piNeapplEs
-    
-    # here the above becomes "diced-pineapples"
-    song=songs_name.lower().replace(' ','-')
-    artiste_name = input("input the name of the artiste : ")#Rick Ross
+songs_name = input("input the name of the song : ") #eg Diced piNeapplEs
 
-    # becomes rick-ross
-    artiste=artiste_name.lower().replace(' ','-') 
+# here the above becomes "diced-pineapples"
+song=songs_name.lower().replace(' ','-')
+artiste_name = input("input the name of the artiste : ")#Rick Ross
 
-    get_lyrics(artiste,song)
-    
+# becomes rick-ross
+artiste=artiste_name.lower().replace(' ','-') 
+
+get_lyrics(artiste,song)
+
