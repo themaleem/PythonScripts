@@ -55,15 +55,15 @@ def get_lyrics(artiste,song):
     finally:
         print ('Thanks for using the program')
 
+if __name__ == "__main__":
+    songs_name = input("input the name of the song : ") #eg Diced piNeapplEs
 
-songs_name = input("input the name of the song : ") #eg Diced piNeapplEs
+    # here the above becomes "diced-pineapples"
+    song=songs_name.lower().replace(' ','-')
+    artiste_name = input("input the name of the artiste : ")#Rick Ross
 
-# here the above becomes "diced-pineapples"
-song=songs_name.lower().replace(' ','-')
-artiste_name = input("input the name of the artiste : ")#Rick Ross
+    # becomes rick-ross
+    artiste=artiste_name.lower().replace(' ','-') 
 
-# becomes rick-ross
-artiste=artiste_name.lower().replace(' ','-') 
-
-get_lyrics(artiste,song)
+    get_lyrics(artiste,song)
 
