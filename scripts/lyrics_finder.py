@@ -14,11 +14,10 @@ print("""
     All you need is the artiste's name and the song's name
 """)
 
-import requests
-from bs4 import BeautifulSoup
-
 
 def get_lyrics(artiste,song):
+    import requests
+    from bs4 import BeautifulSoup
 
     half_url = "https://genius.com/" #sGenius Lyrics website
     #this part is needed according to how genius lyrics urls are wired
@@ -66,4 +65,3 @@ if __name__ == "__main__":
     artiste=artiste_name.lower().replace(' ','-') 
 
     get_lyrics(artiste,song)
-
