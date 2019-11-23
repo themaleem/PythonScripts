@@ -42,6 +42,9 @@ def get_chatters(filepath):
     #Milestone 3.1
     print(f'This chat contains {len(patterns)} sent messages')
     
+    #Milestone 3.1    
+#     print(sum(file_content.count('- '+i+':') for i in chatters))
+    
     for i in patterns:
     #   the regexp finds all matches even after the first semi-colon ':' but we really only need the first :
     #   so we split whatever it returns at every semicolon ':' 
@@ -52,7 +55,10 @@ def get_chatters(filepath):
         #   append sender's name if not already in chatter's list
         if i not in chatters: 
             chatters.append(i)
-    
+            
+    for i in chatters:
+        print(f'messages sent by {i}:',file_content.count('- '+i+':'))
+        
     return chatters
 
 if __name__ == "__main__":
